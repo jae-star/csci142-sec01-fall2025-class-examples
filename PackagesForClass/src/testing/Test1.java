@@ -19,6 +19,10 @@ public class Test1
 	{
 		value++;
 		System.out.println("value1 = " + value);
+		
+		
 	}
 
 }
+
+//protected class means that nothing (in another class) else can see it unless it's extended to another class
