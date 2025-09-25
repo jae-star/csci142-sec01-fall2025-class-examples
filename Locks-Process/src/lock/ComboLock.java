@@ -1,7 +1,9 @@
 package lock;
 
 public class ComboLock implements Lock{
-	public final int COMBO_LENGTH = 3;
+	public final static int COMBO_LENGTH = 3;
+	public final static int MAX_TICKS = 39;
+	
 	private int[] combination;
 	private int[] attempt;
 	private boolean isLocked;
@@ -43,6 +45,10 @@ public class ComboLock implements Lock{
 	public boolean isLocked() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	public int[] getCombination() {
+		return null;
 	}
 
 }
