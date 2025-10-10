@@ -1,4 +1,4 @@
-package lock;
+ package lock;
 
 public class ComboLock implements Lock{
 	public final static int COMBO_LENGTH = 3;
@@ -14,26 +14,21 @@ public class ComboLock implements Lock{
 	}
 	
 	public boolean turnRight(int ticks) {
-		return false;	
+	    return false;  
 	}
-	
+
 	public boolean turnLeft(int ticks) {
-		return false;
+	    return false;
 	}
 	
 	public void reset() {
+	    isReset = true;
 	}
-	
-	public boolean isReset() {
-		return false;
-	}
-	
 
-	@Override
-	public boolean lock() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isReset() {
+	    return isReset;
 	}
+
 
 	@Override
 	public boolean unlock() {
@@ -43,12 +38,17 @@ public class ComboLock implements Lock{
 
 	@Override
 	public boolean isLocked() {
-		// TODO Auto-generated method stub
-		return false;
+	    return isLocked;
 	}
 	
 	public int[] getCombination() {
-		return null;
+	    return combination;
+	}
+
+	@Override
+	public boolean lock() {
+	    isLocked = true;
+	    return isLocked; // true after locking
 	}
 
 }
