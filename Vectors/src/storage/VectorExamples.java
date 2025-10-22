@@ -18,12 +18,18 @@ public class VectorExamples {
 //			System.out.println(values[i]);
 //		}
 		System.out.println("Begin");
-		Vector vector = new Vector();
+		Vector vector = new Vector(3000, 100);
 		
 		System.out.println("size = " + vector.size() + "  capacity = " + vector.capacity());
 		
-		for (int i = 0; i < 11; i++) {
+		for (int i = 0; i < 100; i++) {
+			/*
+			 *  add(i) "autoboxes" the primitive "i" and creates an
+			 *  Integer object from it, just like we "explicitly" do
+			 *  in the line below with Integer.valueOf()
+			 */
 			vector.add(i);
+			vector.add(Integer.valueOf(i));
 			System.out.println("size = " + vector.size() 
 					+ "  capacity = " + vector.capacity()
 					+ "  conentents: " + vector.getLast());
