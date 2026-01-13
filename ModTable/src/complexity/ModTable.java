@@ -1,4 +1,4 @@
-package complexity;
+ypackage complexity;
 public class ModTable
 {
    // properties
